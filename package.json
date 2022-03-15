@@ -1,0 +1,51 @@
+{
+  "name": "Udeler",
+  "version": "1.10.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heliomarpm/udemy-downloader-gui.git"
+  },
+  "description": "A cross platform (Windows, Mac, Linux) desktop application for downloading Udemy Courses.",
+  "scripts": {
+    "dev": "electron . --debug",
+    "start": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "build": "electron-builder -wml",
+    "build-win": "electron-builder -w",
+    "build-win32": "electron-builder -w \"--ia32\"",
+    "build-mac": "electron-builder -m",
+    "build-linux": "electron-builder -l",
+    "dist": "build"
+  },
+  "build": {
+    "directories": {
+      "buildResources": "assets/images/build"
+    },
+    "linux": {
+      "category": "Utility"
+    }
+  },
+  "author": {
+    "name": "Faisal Umair",
+    "email": "eff.umair@gmail.com",
+    "url": "https://github.com/FaisalUmair"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.2.4",
+    "electron-builder": "^22.11.7",
+    "electron-download-tf": "^4.3.4",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "dependencies": {
+    "cookie": "^0.4.1",
+    "dialogs": "^2.0.1",
+    "electron-settings": "^3.2.0",
+    "jquery": "^3.6.0",
+    "mkdirp": "^0.5.5",
+    "mt-files-downloader": "github:FaisalUmair/mt-files-downloader-wrapper",
+    "node-vtt-to-srt": "github:/riazXrazor/vtt-to-srt.git",
+    "sanitize-filename": "^1.6.3",
+    "socket.io": "^4.1.3"
+  }
+}
